@@ -48,7 +48,7 @@ def unite_repeat(reformat_list):
 
 # Логика записи полученных данных в файл CSV
 def write_reformat_data(contacts):
-    with open("files/phonebook.csv", "w", encoding='utf-8') as f:
+    with open("files/phonebook.csv", "w", newline='', encoding='utf-8') as f:
         data_writer = csv.writer(f, delimiter=',')
         # Вместо contacts_list подставьте свой список
         data_writer.writerows(contacts)
