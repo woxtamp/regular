@@ -50,11 +50,11 @@ def unite_repeat(reformat_list):
 def write_reformat_data(contacts):
     with open("files/phonebook.csv", "w", newline='', encoding='utf-8') as f:
         data_writer = csv.writer(f, delimiter=',')
-        # Вместо contacts_list подставьте свой список
         data_writer.writerows(contacts)
 
 
-contacts_raw = open_data()
-contacts_reformat = reformat_data(contacts_raw)
-contacts_unite = unite_repeat(contacts_reformat)
-write_reformat_data(contacts_unite)
+if __name__ == '__main__':
+    contacts_raw = open_data()
+    contacts_reformat = reformat_data(contacts_raw)
+    contacts_unite = unite_repeat(contacts_reformat)
+    write_reformat_data(contacts_unite)
